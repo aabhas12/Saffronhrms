@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.skyward.hrms"
+    android:versionCode="1"
+    android:versionName="1.0.0.6" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.skyward.hrms.MainActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.skyward.hrms.EditCustomerActivity" 
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.skyward.hrms.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.skyward.hrms.CustomerListActivity"
+            android:screenOrientation="portrait" >
+            
+        </activity>
+        <activity android:name="com.skyward.hrms.DailyAttendanceActivity"
+            android:screenOrientation="portrait" />
+        <!-- created by Sam at 2015-01-06 22:24:49 -->
+
+        <activity android:name=".SplashActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>
